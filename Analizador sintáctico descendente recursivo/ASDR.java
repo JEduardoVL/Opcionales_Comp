@@ -18,10 +18,10 @@ public class ASDR implements Parser{
         Q();
 
         if(preanalisis.tipo == TipoToken.EOF && !hayErrores){
-            System.out.println("Consulta correcta");
+            System.out.println("Consulta correcta ASDR");
             return  true;
         }else {
-            System.out.println("Se encontraron errores");
+            System.out.println("Se encontraron errores ASDR");
         }
         return false;
     }

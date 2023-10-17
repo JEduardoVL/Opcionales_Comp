@@ -26,9 +26,8 @@ public class TablaAnalisis {
         // Por A → A2 A1
         putProduccion(TipoToken.IDENTIFICADOR, TipoToken.IDENTIFICADOR, Arrays.asList(TipoNoTerminal.A2, TipoNoTerminal.A1));
 
-        // Otros casos pueden ser añadidos de forma similar...
+        
 
-        // Recuerda que estos son solo ejemplos basados en las producciones que hemos discutido. Deberías llenar la tabla para todos los casos posibles.
     }
 
     private void putProduccion(TipoToken noTerminal, TipoToken terminal, List<Enum<?>> produccion) {

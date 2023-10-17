@@ -51,10 +51,10 @@ public class ASDI implements Parser {
         }
 
         if (!hayErrores && preanalisis.tipo == TipoToken.EOF) {
-            System.out.println("Consulta correcta");
+            System.out.println("Consulta correcta ASDI");
             return true;
         } else {
-            System.out.println("Se encontraron errores");
+            System.out.println("Se encontraron errores ASDI");
             return false;
         }
     }
