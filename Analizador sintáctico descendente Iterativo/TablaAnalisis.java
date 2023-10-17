@@ -26,7 +26,30 @@ public class TablaAnalisis {
         // Por A → A2 A1
         putProduccion(TipoToken.IDENTIFICADOR, TipoToken.IDENTIFICADOR, Arrays.asList(TipoNoTerminal.A2, TipoNoTerminal.A1));
 
-        
+        // Por A1 → , A
+        putProduccion(TipoToken.COMA, TipoToken.COMA, Arrays.asList(TipoToken.COMA, TipoNoTerminal.A));
+
+        // Por A2 → id A3
+        putProduccion(TipoToken.IDENTIFICADOR, TipoToken.IDENTIFICADOR, Arrays.asList(TipoToken.IDENTIFICADOR, TipoNoTerminal.A3));
+
+        // Por A3 → . id
+        putProduccion(TipoToken.PUNTO, TipoToken.PUNTO, Arrays.asList(TipoToken.PUNTO, TipoToken.IDENTIFICADOR));
+
+        // Por T → T1 T2
+        putProduccion(TipoToken.IDENTIFICADOR, TipoToken.IDENTIFICADOR, Arrays.asList(TipoNoTerminal.T2, TipoNoTerminal.T1));
+
+        // Por T1 → , T
+        putProduccion(TipoToken.COMA, TipoToken.COMA, Arrays.asList(TipoToken.COMA, TipoNoTerminal.T));
+
+        // Por T2 → id T3
+        putProduccion(TipoToken.IDENTIFICADOR, TipoToken.IDENTIFICADOR, Arrays.asList(TipoToken.IDENTIFICADOR, TipoNoTerminal.T3));
+
+        // Por T3 → id
+        putProduccion(TipoToken.IDENTIFICADOR, TipoToken.IDENTIFICADOR, Arrays.asList(TipoToken.IDENTIFICADOR));
+
+//----------------------------------------------------------------------------------------------------------------------------------
+        // Por A1 → E
+
 
     }
 
