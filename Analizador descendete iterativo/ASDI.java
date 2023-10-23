@@ -16,16 +16,16 @@ public class ASDI implements Parser {
         M.put(new Pair<>("P", TipoToken.IDENTIFICADOR), 6);
         M.put(new Pair<>("A", TipoToken.IDENTIFICADOR), 7);
         M.put(new Pair<>("A1", TipoToken.COMA), 8);
-        M.put(new Pair<>("A1", TipoToken.FROM), 9); // epsilon
+        M.put(new Pair<>("A1", TipoToken.FROM), 9); 
         M.put(new Pair<>("A2", TipoToken.IDENTIFICADOR), 10);
         M.put(new Pair<>("A3", TipoToken.PUNTO), 11);
-        M.put(new Pair<>("A3", TipoToken.FROM), 12); // epsilon
+        M.put(new Pair<>("A3", TipoToken.FROM), 12); 
         M.put(new Pair<>("T", TipoToken.IDENTIFICADOR), 13);
         M.put(new Pair<>("T1", TipoToken.COMA), 14);
-        M.put(new Pair<>("T1", TipoToken.EOF), 15); // epsilon
+        M.put(new Pair<>("T1", TipoToken.EOF), 15); 
         M.put(new Pair<>("T2", TipoToken.IDENTIFICADOR), 16);
         M.put(new Pair<>("T3", TipoToken.IDENTIFICADOR), 17);
-        M.put(new Pair<>("T3", TipoToken.EOF), 18); // epsilon
+        M.put(new Pair<>("T3", TipoToken.EOF), 18); 
     }
 
     public ASDI(List<Token> tokens) {
@@ -89,7 +89,7 @@ public class ASDI implements Parser {
                             pila.push(TipoToken.COMA);
                             break;
                         case 9:
-                            break; // epsilon
+                            break; 
                         case 10:
                             pila.push("A3");
                             pila.push(TipoToken.IDENTIFICADOR);
@@ -99,7 +99,7 @@ public class ASDI implements Parser {
                             pila.push(TipoToken.PUNTO);
                             break;
                         case 12:
-                            break; // epsilon
+                            break;
                         case 13:
                             pila.push("T1");
                             pila.push("T2");
@@ -109,7 +109,7 @@ public class ASDI implements Parser {
                             pila.push(TipoToken.COMA);
                             break;
                         case 15:
-                            break; // epsilon
+                            break; 
                         case 16:
                             pila.push("T3");
                             pila.push(TipoToken.IDENTIFICADOR);
@@ -118,14 +118,14 @@ public class ASDI implements Parser {
                             pila.push(TipoToken.IDENTIFICADOR);
                             break;
                         case 18:
-                            break; // epsilon
+                            break; 
                     }
                 }
             }
             X = pila.peek(); // Actualizar X con el símbolo de la parte superior de la pila
         }
     
-        System.out.println("Análisis completado con éxito.");
+        System.out.println("Consulta correcta ASDI");
         return true;
     }
 
